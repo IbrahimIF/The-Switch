@@ -1,23 +1,17 @@
-import { useState } from 'react'
-
-import './App.css'
-
+import './Index.css'
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import First from './Components/Main Page/First';
+import Second from './Components/Second/Second';
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-    <div className="switch">
-	<input type="checkbox"/>
-  
-	<label></label>
-</div> 
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-    </div>
-    </>
+
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={<First/>} />
+    <Route path="/Second" element={<Second/>} />
+  </Routes>
+</BrowserRouter>
   )
 }
 
