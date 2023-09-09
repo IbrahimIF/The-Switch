@@ -1,12 +1,12 @@
 import './MainSwitch.css'
 import { useState } from 'react';
+import XboxAchievment from '../Xbox Achievment/achievment';
 
 function MainSwitch() {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
-    /*play sound effect*/ 
   };
   return (
 
@@ -43,6 +43,7 @@ function MainSwitch() {
   </div>
 </label>
 </div>
+<XboxAchievment />
 </>
   )
 }
