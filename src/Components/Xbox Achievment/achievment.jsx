@@ -40,7 +40,7 @@ const Achievement = () => {
 
   // Call the function to display the achievement (you can customize the parameters)
   useEffect(() => {
-    showAchievement("Xbox One Achievement", 100, false);
+    showAchievement("flicking the switch", 150, true);
   }, []);
 
   return (

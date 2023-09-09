@@ -14,6 +14,7 @@ function MainSwitch() {
 <div>
 <label htmlFor="lightSwitch" className="wrap">
 <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} id="lightSwitch" name="lightSwitch" className="light-switch"/>
+{!isChecked && <XboxAchievment />}
   <div className="panel">
     <div className="overlay"></div>
     <div className="screw top">
@@ -43,7 +44,6 @@ function MainSwitch() {
   </div>
 </label>
 </div>
-<XboxAchievment />
 </>
   )
 }
