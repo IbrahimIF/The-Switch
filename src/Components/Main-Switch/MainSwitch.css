@@ -1,13 +1,13 @@
 
 .wrap {
-  align-content: center;
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-position: absolute;
-left: 41%;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 .panel {
   background-color: #fff;

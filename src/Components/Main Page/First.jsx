@@ -14,8 +14,11 @@ function First() {
   return (
 <>
 <div>next to is the number: {counter}</div>
+
 <MainSwitch/>
 {achievment}
+
+
 </>
   )
 }

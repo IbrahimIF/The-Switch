@@ -1,11 +1,8 @@
-
-  
-  .content{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-  }
-  
+.content{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
   .content-settings{
     max-width: 420px;
     width: 100%;
