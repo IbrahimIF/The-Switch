@@ -1,20 +1,21 @@
 import './MainSwitch.css'
 import { useState } from 'react';
-import XboxAchievment from '../Xbox Achievment/achievment';
+import { useCounter } from '../CounterContext/CounterContext';
 
 function MainSwitch() {
   const [isChecked, setIsChecked] = useState(false);
+  const {incrementCounter} = useCounter();
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
+    incrementCounter();
   };
   return (
 
 <>
 <div>
 <label htmlFor="lightSwitch" className="wrap">
-<input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} id="lightSwitch" name="lightSwitch" className="light-switch"/>
-{!isChecked && <XboxAchievment />}
+<input type="checkbox" checked={!isChecked} onChange={handleCheckboxChange} id="lightSwitch" name="lightSwitch" className="light-switch"/>
   <div className="panel">
     <div className="overlay"></div>
     <div className="screw top">
