@@ -10,6 +10,8 @@ function MainSwitch() {
     setIsChecked(!isChecked);
     incrementCounter();
   };
+
+  
   return (
 
 <>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './achievment.css';
+import { useCounter } from '../CounterContext/CounterContext';
 
 const Achievement = () => {
   // Define a function to show the achievement
@@ -18,6 +19,7 @@ const Achievement = () => {
     achievName.innerText = title;
     achievScore.innerText = score;
     unlocked.innerText = rare ? 'Rare achievement unlocked' : 'Achievement unlocked';
+    
 
     if (rare) {
       achievementSoundRare.play();
@@ -37,10 +39,22 @@ const Achievement = () => {
       achievementContainer.classList.remove('rare');
     }, 12000);
   };
+  const {counter} = useCounter();
+  let Custom = String;
+
+  if (counter > 2){
+  Custom = '"flicking the switch", 100, false';
+
+  }
+
+  if (counter > 27){
+    Custom = '"Ignore", 200, true';
+
+  }
 
   // Call the function to display the achievement (you can customize the parameters)
   useEffect(() => {
-    showAchievement("flicking the switch", 150, true);
+    showAchievement(Custom);
   }, []);
 
   return (
