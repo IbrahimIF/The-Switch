@@ -210,22 +210,24 @@ input[type=checkbox]:checked {
         }
       }
       
-      .shadow {
+
         .shadow.top {
-          left: -90px;
+          bottom: 20px;
           filter: blur(0px);
-          opacity: .5;
+          left: -90px;
+          opacity: .1;
           transform: rotate(0deg);
         }
-
+        
         .shadow.bottom {
           left: -70px;
           filter: blur(10px);
           opacity: 1;
           transform: rotate(-20deg);
         }
-      }
     }
+
+    
     
     .overlay {
       background-color: rgba(0, 0, 0, 0);
