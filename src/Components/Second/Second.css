@@ -28,17 +28,16 @@
 }
 
  .shadowes { /*the shadow of the switch*/
-    background-color: rgba(255, 0, 0, 0.33);
-    height: 90px;
+    background-color: rgba(0, 0, 0, 0.268);
+    height: 47px;
     position: absolute;
-    transition: left .25s ease, filter .25s ease, opacity .25s ease, transform .25s ease;
-    width: 90px;
+    width: 24px;
     
-    bottom: 20px;
-    filter: blur(10px);
-    left: -70px;
+    bottom: -2px;
+    filter: blur(5px);
+    left: 38px;
     opacity: 1;
-    transform: rotate(20deg);
+    transform: rotate(-18deg);
 }
 
 
@@ -50,7 +49,7 @@
     left: -25px;
     bottom: -20px;
     right: -25px;
-    background-color: #ffffff; /* Fallback */
+    background-color: #f9f9f9; /* Fallback */
     border-radius: 4px;
     box-shadow: 
         inset -4px -4px 8px rgb(173, 173, 173), 
@@ -76,19 +75,20 @@
         0 121px 0 black; /* And its reflection */
 }
 .switches input:checked ~ label { /* Button */
-    background: #c0c0c08a;
+    background: #dfdfdfe8; /*main front*/
     /*line surrounding*/
     box-shadow:
-    inset 0 1px 0 rgb(255, 255, 255),
-    0 0 0 1px #616161,
-    0 0 5px 1px rgba(0,0,0,0.2),
-    inset 0 10px 1px #a5a5a5,
-    inset 0 11px 0 rgba(153, 153, 153, 0.5),
-    inset 0 -45px 3px #a8a8a8;
+    inset 0 1px 0 rgb(239, 239, 239), /*side edge*/
+    0 0 0 1px #868686, /*surrounding edge*/
+    0 0 5px 1px rgba(0,0,0,0.2), /*shadow edge*/
+    inset 0 10px 1px #f4f4f4, /*Main side edge*/
+    inset 0 11px 0 rgba(224, 224, 224, 0.5), /*third side edge*/
+    inset 0 -45px 3px #ffffff, /*second main face*/
+    inset 0 -45px 2px rgba(42, 42, 42, 0.623); /*middle side edge*/
 }
 
 .switches input:checked ~ label:before { /* Button */
-    background: rgb(174, 174, 174);
+    background: rgb(255, 255, 255);
     box-shadow:
         0 1px 0 black, /* Subtle reflection on the bottom of the hole */
         0 120px 0 rgb(0, 255, 89), /* Faking a second screw hole... */
@@ -108,11 +108,16 @@
 }
 
 .switches input:checked ~ .shadowes { /* Button */
-    left: -70px;
-    filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.333);
+    height: 40px;
+    position: absolute;
+    width: 20px;
+    
+    bottom: 47px;
+    filter: blur(5px);
+    left: 40px;
     opacity: 1;
-    transform: rotate(-10deg);
-background-color: rgb(0, 0, 0);
+    transform: rotate(20deg);
 }
 
 

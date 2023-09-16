@@ -6,8 +6,8 @@ function Second() {
 <>
 <div>
 <div className="switches">
-  <div className="shadowes"/>
       <input type="checkbox"/>
+      <div className="shadowes"/>
       <label></label>
   </div> 
 </div>
