@@ -1,3 +1,31 @@
+
+.container{
+display: flex;
+justify-content: flex-start;
+flex-wrap: wrap;
+gap: 100px 90px;
+
+position: fixed;
+left: -69px;
+width: 600px;
+top: -73px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 64px 74px;
+    
+    position: fixed;
+    left: -69px;
+    width: 393px;
+    top: -73px;
+    }
+  }
+
 .switches {
     width: 50px;
     height: 100px;
@@ -75,16 +103,16 @@
         0 121px 0 black; /* And its reflection */
 }
 .switches input:checked ~ label { /* Button */
-    background: #dfdfdfe8; /*main front*/
+    background: #e8e8e8e8; /*main front*/
     /*line surrounding*/
     box-shadow:
-    inset 0 1px 0 rgb(239, 239, 239), /*side edge*/
+    inset 0 1px 0 rgb(255, 255, 255), /*side edge*/
     0 0 0 1px #868686, /*surrounding edge*/
-    0 0 5px 1px rgba(0,0,0,0.2), /*shadow edge*/
-    inset 0 10px 1px #f4f4f4, /*Main side edge*/
-    inset 0 11px 0 rgba(224, 224, 224, 0.5), /*third side edge*/
+    0 0 5px 1px rgba(89, 89, 89, 0.2), /*shadow edge*/
+    inset 0 10px 1px #fbfbfb, /*Main side edge*/
+    inset 0 11px 0 rgba(204, 204, 204, 0.838), /*third side edge*/
     inset 0 -45px 3px #ffffff, /*second main face*/
-    inset 0 -45px 2px rgba(42, 42, 42, 0.623); /*middle side edge*/
+    inset 0 -45px 2px rgba(0, 0, 0, 0.721); /*middle side edge*/
 }
 
 .switches input:checked ~ label:before { /* Button */
@@ -120,4 +148,92 @@
     transform: rotate(20deg);
 }
 
+
+
+
+
+/*
+import React, { useEffect, useState } from 'react';
+
+const [timeoutDuration, setTimeoutDuration] = useState(3);
+
+
+const [fadeout, setFadeout] = useState(false);
+
+useEffect(() => {
+    if (fadeout) {
+      const timer = setTimeout(() => {
+        resetCounter();
+        navigate('/First');
+      }, 4000); 
+
+      return () => clearTimeout(timer);
+    }
+  }, [fadeout, navigate]);
+
+
+  setTimeout(() => {
+      setFadeout(true);
+    }, 6);
+
+
+
+
+
+    <div className={`fadein ${fadeout ? 'fadeout' : ''}`} >
+    </div>
+
+/////////////////////////////////////////////////
+
+
+ <div className={`fade-container ${fadeout ? 'fadeout' : ''}`} >
+ </div>
+
+
+useEffect(() => {
+    if (timeoutDuration === 0) {
+      setFadeout(true);
+      setTimeout(() => navigate('/Start'), 1000);
+    } else {
+      const timer = setTimeout(() => {
+        setTimeoutDuration(timeoutDuration - 1);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [timeoutDuration, navigate]);
+
+
+
+
+
+
+
+
+
+
+      .fade-container {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+  }
+
+
+
+   .fadein {
+        animation: fadeIn 5s;
+      }
+      
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        50% { opacity: 1; }
+      }
+      @keyframes fadeInText {
+        0% { opacity: 0; }
+        10% { opacity: 1; }
+      }
+
+
+
+*/
 

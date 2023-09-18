@@ -40,21 +40,25 @@ const Achievement = () => {
     }, 12000);
   };
   const {counter} = useCounter();
-  let Custom = String;
+  let name = String;
+  let type = Boolean;
+  let points = Number;
 
   if (counter > 2){
-  Custom = '"flicking the switch", 100, false';
-
+name = "flicking the switch"
+type = 100
+points = false
   }
 
   if (counter > 27){
-    Custom = '"Ignore", 200, true';
-
+    name = "Ignore"
+    type = true
+    points = 200
   }
 
   // Call the function to display the achievement (you can customize the parameters)
   useEffect(() => {
-    showAchievement(Custom);
+    showAchievement(name, points, type);
   }, []);
 
   return (

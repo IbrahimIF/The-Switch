@@ -2,12 +2,11 @@
     font-family: sans-serif;
     font-weight: bold;
     font-size: 30px;
-    color: rgb(255, 255, 255);
-    text-shadow: .04em .04em .04em rgba(0, 0, 0, 0.503);
+    color: rgb(0, 0, 0);
 
     border-style: groove;
     border-radius: 10px;
-    background-color: black;
+    border-color: rgba(0, 0, 0, 0.307);
 
 display: flex;
 flex-wrap: wrap;
