@@ -404,7 +404,7 @@ return (
 </div>
 
 {custom}
-<p>{totalCounter}</p>
+
 </div>
 </>
   )
