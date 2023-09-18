@@ -39,21 +39,28 @@ const Achievement = () => {
       achievementContainer.classList.remove('rare');
     }, 12000);
   };
-  const {counter} = useCounter();
+  const {counter, totalCounter} = useCounter();
+
   let name = String;
   let type = Boolean;
   let points = Number;
 
   if (counter > 2){
 name = "flicking the switch"
-type = 100
-points = false
+type = false
+points = 100
   }
 
   if (counter > 27){
     name = "Ignore"
     type = true
     points = 200
+  }
+
+  if (totalCounter == 12){
+    name = "no flicks given"
+    type = true
+    points = 500
   }
 
   // Call the function to display the achievement (you can customize the parameters)

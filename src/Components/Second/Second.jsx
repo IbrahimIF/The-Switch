@@ -1,6 +1,7 @@
 import './Second.css'
 import { useCounter } from '../CounterContext/CounterContext';
 import React, { useState, useEffect } from 'react';
+import XboxAchievment from '../Xbox Achievment/achievment';
 
 import Jake from '../../assets/audio/Jake the Dog Laughing at his own Joke.mp3';
 import vader from '../../assets/audio/Darth vader screaming noooo.mp3';
@@ -16,9 +17,25 @@ import dog from '../../assets/audio/What the dog doin.mp3';
 import sonic from '../../assets/audio/Youre too slow.mp3'
 
 import light from '../../assets/audio/light-switch-81967.mp3';
+import Achievement from '../Xbox Achievment/achievment';
 
 
 function Second() {
+  const { counter1, incrementCounter1, 
+          counter2, incrementCounter2, 
+          counter3, incrementCounter3, 
+          counter4, incrementCounter4, 
+          counter5, incrementCounter5, 
+          counter6, incrementCounter6, 
+          counter7, incrementCounter7, 
+          counter8, incrementCounter8, 
+          counter9, incrementCounter9, 
+          counter10, incrementCounter10, 
+          counter11, incrementCounter11, 
+          counter12, incrementCounter12,
+          totalCounter,
+        } = useCounter();
+
   const [Start, setStart] = useState(true);
   const [audio1] = useState(new Audio(Jake));
   const [audio2] = useState(new Audio(vader));
@@ -33,6 +50,7 @@ function Second() {
   const [audio11] = useState(new Audio(dog));
   const [audio12] = useState(new Audio(sonic));
 
+  let custom = null;
   
 
   const switchOne = () => {
@@ -46,6 +64,10 @@ function Second() {
     } else {
       audio1.pause();
       audio1.currentTime = 0;
+    }
+
+    if (counter1 < 1){
+      incrementCounter1();
     }
   };
 
@@ -64,6 +86,10 @@ const switchTwo = () => {
       audio2.pause();
       audio2.currentTime = 0;
     }
+
+    if (counter2 < 1){
+      incrementCounter2();
+    }
 };
 
 const switchThree = () => {
@@ -77,6 +103,10 @@ const switchThree = () => {
   } else {
     audio3.pause();
     audio3.currentTime = 0;
+  }
+
+  if (counter3 < 1){
+    incrementCounter3();
   }
 };
 
@@ -92,6 +122,10 @@ const switchFour = () => {
     audio4.pause();
     audio4.currentTime = 0;
   }
+
+  if (counter4 < 1){
+    incrementCounter4();
+  }
 };
 
 const switchFive = () => {
@@ -105,6 +139,10 @@ const switchFive = () => {
   } else {
     audio5.pause();
     audio5.currentTime = 0;
+  }
+
+  if (counter5 < 1){
+    incrementCounter5();
   }
 };
 
@@ -120,6 +158,10 @@ const switchSix = () => {
     audio6.pause();
     audio6.currentTime = 0;
   }
+
+  if (counter6 < 1){
+    incrementCounter6();
+  }
 };
 
 const switchSeven = () => {
@@ -133,6 +175,10 @@ const switchSeven = () => {
   } else {
     audio7.pause();
     audio7.currentTime = 0;
+  }
+
+  if (counter7 < 1){
+    incrementCounter7();
   }
 };
 
@@ -148,6 +194,10 @@ const switchEight = () => {
     audio8.pause();
     audio8.currentTime = 0;
   }
+
+  if (counter8 < 1){
+    incrementCounter8();
+  }
 };
 
 const switchNine = () => {
@@ -162,6 +212,10 @@ const switchNine = () => {
     audio9.pause();
     audio9.currentTime = 0;
   }
+  if (counter9 < 1){
+    incrementCounter9();
+  }
+
 };
 
 const switchTen = () => {
@@ -175,6 +229,10 @@ const switchTen = () => {
   } else {
     audio10.pause();
     audio10.currentTime = 0;
+  }
+
+  if (counter10 < 1){
+    incrementCounter10();
   }
 };
 
@@ -190,6 +248,10 @@ const switchEleven = () => {
     audio11.pause();
     audio11.currentTime = 0;
   }
+
+  if (counter11 < 1){
+    incrementCounter11();
+  }
 };
 
 const switchTwelve = () => {
@@ -203,7 +265,18 @@ const switchTwelve = () => {
     audio12.pause();
     audio12.currentTime = 0;
   }
+
+  if (counter12 < 1){
+    incrementCounter12();
+  }
 };
+
+
+if (totalCounter === 12){
+  custom = <XboxAchievment />;
+
+}
+
 
 return (
 <>
@@ -329,6 +402,9 @@ return (
 </div>
 
 </div>
+
+{custom}
+<p>{totalCounter}</p>
 </div>
 </>
   )
