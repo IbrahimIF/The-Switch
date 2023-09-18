@@ -4,6 +4,8 @@ function Second() {
 
   return (
 <>
+<div className= "fadein">
+
 <div className="container">
 
 <div>
@@ -103,6 +105,7 @@ function Second() {
   </div> 
 </div>
 
+</div>
 </div>
 </>
   )

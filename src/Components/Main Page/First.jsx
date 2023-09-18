@@ -32,21 +32,18 @@ function First() {
 
   }
 
-
   useEffect(() => {
     if (counter > 30) {
-      const timer = setTimeout(() => {
-        navigate('/Second');
-      }, 400); 
-
-      return () => clearTimeout(timer);
-    }
-  }, [navigate]);
-
-
-  setTimeout(() => {
+      // Set the fadeout state to trigger the animation
       setFadeout(true);
-    }, 6);
+
+      // After the animation duration (2 seconds in this case), navigate to /Second
+      setTimeout(() => {
+        navigate('/Second');
+      }, 5000); // Adjust the delay to match the animation duration
+    }
+  }, [navigate, counter]);
+
 
   return (
 <>
