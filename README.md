@@ -1,7 +1,7 @@
 
 ![image](https://github.com/user-attachments/assets/5f8b9945-1d0a-4920-b29a-ad778b2a321b)
 
-![Project Status](https://img.shields.io/badge/status-active-brightgreen)
+![Project Status](https://img.shields.io/badge/status-completed-brightgreen)
 
 ![Static Badge](https://img.shields.io/badge/made_wtih-React_+_Vite-blue)
 
@@ -46,13 +46,13 @@ This project includes several exciting features for you to explore:
 
 
 -----
-## Acknowledgments:
+## Acknowledgement:
 
 - [Achievement CSS](https://codepen.io/uenify/pen/KxzKVd)
 - [Light Switch CSS](https://codepen.io/Katzwinkel/pen/yLNbwVV)
 
 
 ---
-## License
+## License:
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
