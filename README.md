@@ -3,7 +3,7 @@
 
 ![Project Status](https://img.shields.io/badge/status-completed-brightgreen)
 
-![Static Badge](https://img.shields.io/badge/made_wtih-React_+_Vite-blue)
+![Static Badge](https://img.shields.io/badge/made_with-React_+_Vite-blue)
 
 First Iteration and a test of my project idea known as The Switch.
 
@@ -34,19 +34,14 @@ This project includes several exciting features for you to explore:
 - **Hidden Secrets**: Discover hidden elements and secrets within the project for added fun and challenge.
 - **Toggle Switch**: Interact with a switch that you can turn on and off, affecting different aspects of the project.
 
-
-> [!NOTE] 
-> This project may or may not have been left to collect dust
-
-
 -----
-## Technologies and Tools Utilized:
+## Technologies and Tools Utilised:
 
 [![My Skills](https://skillicons.dev/icons?i=react,js,html,css,vite,vercel,vscode&perline=1)](https://skillicons.dev)
 
 
 -----
-## Acknowledgement:
+## Acknowledgment:
 
 - [Achievement CSS](https://codepen.io/uenify/pen/KxzKVd)
 - [Light Switch CSS](https://codepen.io/Katzwinkel/pen/yLNbwVV)
